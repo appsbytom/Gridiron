@@ -1,0 +1,51 @@
+GameManager:
+  PlayersNeeded: 2
+  LobbyCountdownTime: 10
+  GoalSwitchTime: 30
+  GameTime: 120
+  LobbySpawn: world, 0.5, 5, 0.5
+  GoalLocations:
+  - world, 10.5, 5.0, 10.5
+  - world, 15.5, 5.0, 15.5
+  BallLocations:
+  - world, 12.5, 6.0, 12.5
+  - world, 17.5, 6.0, 17.5
+Teams:
+  Ally:
+    Spawn: world, 2.5, 5, 2.5
+    Gear:
+      Armour:
+      - LEATHER_HELMET, &9&lAlly Helmet, BLUE, ;&7The rags worn by soldiers on the battlefield
+      - LEATHER_CHESTPLATE, &9&lAlly Chestplate, BLUE, ;&7The rags worn by soldiers on the battlefield
+      - LEATHER_LEGGINGS, &9&lAlly Leggings, BLUE, ;&7The rags worn by soldiers on the battlefield
+      - LEATHER_BOOTS, &9&lAlly Boots, BLUE, ;&7The rags worn by soldiers on the battlefield
+      Sword: DIAMOND_SWORD, &9&lAlly Sword, 0, ;&7Slice your enemies and retrieve the ball!
+  Axis:
+    Spawn: world, 7.5, 5, 7.5
+    Gear:
+      Armour:
+      - LEATHER_HELMET, &4&lAxis Helmet, RED, ;&7The rags worn by soldiers on the battlefield
+      - LEATHER_CHESTPLATE, &4&lAxis Chestplate, RED, ;&7The rags worn by soldiers on the battlefield
+      - LEATHER_LEGGINGS, &4&lAxis Leggings, RED, ;&7The rags worn by soldiers on the battlefield
+      - LEATHER_BOOTS, &4&lAxis Boots, RED, ;&7The rags worn by soldiers on the battlefield
+      Sword: DIAMOND_SWORD, &4&lAxis Sword, 0, ;&7Slice your enemies and retrieve the ball!
+Ball:
+  Item: DIAMOND
+  Name: '&5&lGridiron Ball'
+  Lore:
+  - ' '
+  - '&7Get to the goal to score a point!'
+Scoreboard:
+  Title: '&5&lGridiron'
+  Lines:
+  - '&7%PlayersName%'
+  - '&7* Team: &d%PlayersTeam%'
+  - '&7* Points: &d%PlayersTeamsPoints%'
+  - ' '
+  - '&7Teams'
+  - '&7* Allys: &d%AllyPoints%'
+  - '&7* Axis: &d%AxisPoints%'
+  - ' '
+  - '&7Game'
+  - '&7* Goal: &d%GoalSwitch%'
+  - '&7* Time: &d%GameTimer%'

@@ -1,0 +1,15 @@
+name: Gridiron
+main: me.Tom.Gridiron.PluginCore
+version: 1.0
+author: TomTom
+description: An MC remake of the COD:WW2 gamemode
+softdepend: [HolographicDisplays]
+
+commands:
+    gridiron:
+        usage: /<command>
+
+permissions:
+    gridiron.admin:
+        description: Admin permissions for the minigame
+        default: op
