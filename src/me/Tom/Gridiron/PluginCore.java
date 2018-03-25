@@ -91,7 +91,7 @@ public class PluginCore extends JavaPlugin {
         commandManager.setup();
         eventManager = new EventManager(this);
         eventManager.setup();
-
+        versionChecker();
         verifyMethods();
     }
 
@@ -126,14 +126,14 @@ public class PluginCore extends JavaPlugin {
 
     private void versionChecker() {
         try {
-            String spigotversion = IOUtils.toString(new URL("https://api.spigotmc.org/legacy/update.php?resource=####"));
+            String spigotversion = IOUtils.toString(new URL("https://api.spigotmc.org/legacy/update.php?resource=54905"));
             String pluginversion = getDescription().getVersion();
             Double spigotver = Double.parseDouble(spigotversion);
             Double pluginver = Double.parseDouble(pluginversion);
             if(spigotver > pluginver) {
                 MessageUtils.consoleMessage("");
                 MessageUtils.consoleMessage(MessageUtils.format("&cYou are not using the most up to date version of " + getDescription().getName() + "!"));
-                MessageUtils.consoleMessage(MessageUtils.format("&chttps://www.spigotmc.org/resources/####/"));
+                MessageUtils.consoleMessage(MessageUtils.format("&chttps://www.spigotmc.org/resources/gridiron-beta.54905/"));
                 MessageUtils.consoleMessage("");
             }
             else {
