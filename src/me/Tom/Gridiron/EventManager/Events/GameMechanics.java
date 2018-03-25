@@ -91,6 +91,9 @@ public class GameMechanics implements Listener {
                 }
             }
         }
+        else {
+            e.setCancelled(true);
+        }
     }
 
     @EventHandler
